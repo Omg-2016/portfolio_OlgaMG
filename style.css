@@ -1,0 +1,446 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url('IMG/foto-proyecto-cara.JPG'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  font-family: 'Fleur_De_Leah', cursive;
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+h2 { 
+  color: white;
+  text-align: center;
+  font-family: 'Caveat';
+  font-size: 2rem;
+  font-weight: 500;
+}
+h3 { 
+  color: white;
+  text-align: center;
+  font-family: 'Delius';
+  font-size: 2rem;
+  font-weight: 500;
+}
+h4 { 
+  color: black;
+  text-align: center;
+  font-family: 'Sriracha';
+  font-size: 2rem;
+  font-weight: 400;
+  list-style: none;
+}
+
+p {
+  font-family: Verdana, sans-serif; /* Cambia la fuente */
+  font-size: 14px; /* Cambia el tamaño del texto */
+  color: #fff7f3; /* Cambia el color del texto (opcional) */
+  line-height: 1.5; /* Cambia el espaciado entre líneas (opcional) */
+}
+
+@font-face {
+  font-family: 'Fleur_De_Leah';
+  src: url('Fonts/Fleur_De_Leah/FleurDeLeah-Regular.ttf') format('truetype');
+      
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Layout para la página principal */
+.contenedor {
+  max-width: 1000px;
+  margin: 20px auto;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(4, auto);
+  grid-template-areas: 
+    "navbar navbar navbar"
+    "contenido contenido sidebar"
+    "bloque1 bloque1 bloque2"
+    "bloque3 bloque3 bloque3"
+    "footer footer footer";
+}
+
+/* Layout para la página sobre-mi */
+.contenedor-sobre-mi {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;  
+  grid-template-rows: auto auto auto auto auto;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1000px;
+  margin: 20px auto;
+  grid-template-areas: 
+    "navbar navbar navbar"
+    "sidebar sidebar sidebar"
+    "contenido contenido contenido"
+    "hobbies hobbies hobbies"
+    "footer footer footer";
+}
+
+nav {
+  background-color: #e6b2ba; /* Fondo de la barra */
+  padding: 20px;
+  color: #fff7f3;
+  grid-area: navbar;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.barra-navegacion {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  justify-content: space-between; /* Distribuye los elementos */
+  padding: 0 20px; 
+}
+
+.home a {
+font-size: 1.5em; /* Tamaño del texto */
+font-weight: bold; /* Negrita */
+color: white; /* Texto blanco */
+text-decoration: none; /* Elimina el subrayado */
+}
+
+.home a:hover {
+color: #cccccc; /* Cambia de color al pasar el cursor (opcional) */
+
+}
+.extra-opciones {
+  margin-left: 20px; /* Espaciado entre las opciones nuevas */
+  font-size: 1em;
+  font-family: 'Arial', sans-serif;
+  color: #30302e; /* Texto dorado */
+  text-decoration: none;
+  font-style: italic;
+}
+
+.extra-opciones:hover {
+  color: #ee94cf; 
+  
+}
+
+.separador {
+  flex-grow: 1; /* Espaciador invisible para empujar los elementos */
+}/* Estilo 
+
+.separador {
+  flex-grow: 1; /* Espaciador invisible para empujar los elementos */
+/* Estilo del <nav> para unificar el fondo */
+
+.contenedor {
+  grid-area: contenedor;
+  text-align: center;
+  background-color: #e6b2ba81;
+  padding: 20px;
+  border-radius: 5px;
+}
+.contenedor-sobre-mi {
+  grid-area: contenedor;
+  text-align: center;
+  background-color: #e6b2ba81;
+  padding: 40px;
+  border-radius: 5px;
+  display: block;
+}
+.contenido {
+  grid-area: contenido;
+  text-align: justify;
+  padding: 20px
+  }
+.contenido-sobre-mi {
+    background-color: #9b92b281;
+    grid-area: contenido;
+    text-align: justify;
+    padding: 20px;
+    border-radius: 8px;
+     
+  }
+/* Sidebar y sus elementos */
+.sidebar {
+  grid-area: sidebar;
+  text-align: center;
+  background-color: #c599b6a8;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.sidebar img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 50%;
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+}
+.sidebar-sobre-mi {
+  grid-area: sidebar;
+  text-align: center;
+  color: #30302e;
+  background-color: #9e3197a8 ;
+  padding: 20px;
+  border-radius: 10px;
+}
+/* Bloques generales */
+.bloque {
+  color: white;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  padding: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#bloque1 {
+  grid-area: bloque1;
+  background: #fad0c4b8;
+}
+
+#bloque2 {
+  grid-area: bloque2;
+  background: #806352a8;
+}
+
+#bloque3 {
+  grid-area: bloque3;
+  background: #fff7f37a;
+}
+.lista-educacion {
+  font-size: 14px;
+  line-height: 2;
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+
+.lista-idiomas {
+  font-size: 14px;
+  line-height: 2;
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+.experiencia-laboral {
+  font-size: 14px;
+  line-height: 2;
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+.experiencia-laboral strong {
+  color: #30302e;
+}
+.logos-Empresa {
+  width: 150px;
+  height: auto;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+.hobbies {
+    display: flex;
+    flex-direction: column; /* Apila el título y las columnas verticalmente */
+    align-items: center; /* Centra horizontalmente el contenido */
+    gap: 20px;
+}
+
+.hobbies h3 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.columna {
+    flex: 1;
+    text-align: center;
+    padding: 15px;
+    border: 1px solid #c292bdd7;
+    border-radius: 8px;
+    display: flex; /* Mantiene la disposición horizontal dentro de las columnas */
+    flex-direction: column; /* Apila el contenido de cada columna verticalmente */
+    align-items: center;
+    justify-content: space-between;
+    background-color: #e6b2baa2;
+}
+
+.columna img {
+    width: 100%;
+    max-width: 180px;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Añade este estilo para asegurar que las columnas estén en fila */
+.hobbies > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    width: 100%; /* Asegura que las columnas ocupen todo el ancho disponible */
+}
+.hobbies-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ejemplo con Grid */
+  gap: 10px;
+}
+.inspiracion {
+  text-align: center;
+  font-style: italic;
+  font-size: 1.2em;
+  color: black; 
+  margin-top: 15px;
+  padding: 10px;
+  border-left: 3px; 
+  border-radius: 8px;
+}
+.hobbies-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px; /* Aumenta el gap para mejor separación */
+  padding: 20px; /* Agrega padding para mejor visualización */
+}
+
+.hobbies-container .columna {
+  text-align: center;
+  padding: 15px;
+  border: 1px solid #c292bdd7;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #e6b2baa2;
+}
+
+.hobbies-container .columna img {
+  width: 100%;
+  max-width: 180px;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Footer */
+footer {
+  background-color: #e98ecbe1;
+  color: white;
+  grid-area: footer;
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  height: 10px;
+}
+.social-icons a{
+  text-decoration: none;
+  margin: 0;
+}
+.social-icons img {
+  width: 30px;      
+  margin: 0 10px;  
+}
+/* Ocultar el botón de hamburguesa en pantallas grandes */
+.button-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+}
+/* Menú en móvil (oculto por defecto) */
+@media screen and (max-width: 768px) {
+  
+  
+  .button-toggle {
+    display: block; /* Mostrar botón hamburguesa */
+  }
+
+  .menu {
+    display: none; /* Ocultar el menú inicialmente */
+    flex-direction: column;
+    background: #e6b2ba;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 5px;
+    
+    
+  }
+
+  .menu a {
+    display: block;
+    padding: 10px;
+    color: white;
+  }
+
+  /* Cuando el menú está abierto */
+  .menu.open {
+    display: flex;
+  }
+}
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .contenedor {
+    grid-template-areas: 
+      "navbar navbar navbar"
+      "contenido contenido contenido"
+      "sidebar sidebar sidebar"
+      "bloque1 bloque1 bloque1"
+      "bloque2 bloque2 bloque2"
+      "bloque3 bloque3 bloque3"
+      "footer footer footer";
+  }
+  
+  .contenedor-sobre-mi {
+    grid-template-areas: 
+      "navbar navbar navbar"
+      "sidebar sidebar sidebar"
+      "contenido contenido contenido"
+      "hobbies hobbies hobbies"
+      "footer footer footer";
+  }
+  .contenedor-mis-proyectos {
+    grid-template-areas: 
+      "navbar navbar navbar"
+      "sidebar sidebar sidebar"
+      "contenido contenido contenido"
+      "hobbies hobbies hobbies"
+      "footer footer footer";
+  }
+}
+.contenedor-servicios {
+  grid-template-areas: 
+    "navbar navbar navbar"
+    "sidebar sidebar sidebar"
+    "contenido contenido contenido"
+    "hobbies hobbies hobbies"
+    "footer footer footer";
+}
+
+
+@media (max-width: 768px) {
+  .hobbies-container {
+      grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+  }
+  .hobbies-container .columna{
+    min-width: 100%;
+  }
+}
